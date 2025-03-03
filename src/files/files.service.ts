@@ -27,10 +27,10 @@ export class FilesService {
 
   create(file: Express.Multer.File, userId: number) {
     return this.repository.save({
-      filename: file.filename,
-      originalname: file.originalname,
+      fileName: file.filename,
+      originalName: file.originalname,
       size: file.size,
-      mimetype: file.mimetype,
+      mimeType: file.mimetype,
       user: { id: userId },
     });
   }

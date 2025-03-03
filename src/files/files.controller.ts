@@ -21,7 +21,6 @@ import { FileType } from './entities/file.entity';
 
 @Controller('files')
 @ApiTags('files')
-@UseGuards(JwtAuthGuard)
 @ApiBearerAuth()
 export class FilesController {
   constructor(private readonly filesService: FilesService) {}
